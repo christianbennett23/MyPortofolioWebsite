@@ -653,9 +653,9 @@ img {
 
 /*==================== SERVICES ====================*/
 .services__container {
-  grid-column-gap: 10rem; /* Right-left gap */
-  grid-row-gap: 10px; /* Top-down gap */
-  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 7rem; /* Right-left gap */
+  grid-row-gap: 20px; /* Top-down gap */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .services__content {
@@ -665,11 +665,23 @@ img {
   border-radius: 0.25rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   transition: 0.3s;
-  width: 160%; /* Set the width to 100% */
+  width: 140%; /* Set the width to 100% */
   max-width: 1200px; /* Optionally, set a maximum width if needed */
   margin: 0 auto; /* Center the box horizontally */
 }
-
+@media (max-width: 768px) {
+  .services__content {
+    position: relative;
+    background-color: var(--container-color);
+    padding: 3.5rem 1rem 7rem 1rem; /* Adjust the top, right, bottom, and left padding values */
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+    width: 100%; /* Set the width to 100% */
+    max-width: 1200px; /* Optionally, set a maximum width if needed */
+    margin: 0 auto; /* Center the box horizontally */
+  }
+}
 .services__content:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -1231,7 +1243,7 @@ img {
     .services__container {
       grid-template-columns: repeat(3, 218px);
       justify-content: flex-end;
-      margin-left: 650px;
+      margin-left: 610px;
     }
     .services__icon {
       font-size: 2rem;
@@ -1244,7 +1256,7 @@ img {
       width: 450px;
     }
     .portfolio__img {
-      width: 320px;
+      width: 250px;
     }
     .portfolio__content {
       align-items: center;
