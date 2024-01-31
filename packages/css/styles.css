@@ -653,7 +653,8 @@ img {
 
 /*==================== SERVICES ====================*/
 .services__container {
-  gap: 10rem;
+  grid-column-gap: 10rem; /* Right-left gap */
+  grid-row-gap: 10px; /* Top-down gap */
   grid-template-columns: repeat(2, 1fr);
 }
 
@@ -1229,7 +1230,8 @@ img {
     }
     .services__container {
       grid-template-columns: repeat(3, 218px);
-      justify-content: center;
+      justify-content: flex-end;
+      margin-left: 650px;
     }
     .services__icon {
       font-size: 2rem;
